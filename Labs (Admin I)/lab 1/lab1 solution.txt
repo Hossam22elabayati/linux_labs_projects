@@ -1,0 +1,70 @@
+1- done
+
+2-
+ cat : view the all content of file 
+ less : view the content of file but if file content is a lot of lines you show some lines from them and press enter to complete the lines
+
+3-  
+- rmdir -> remove only the empty directories , work with directories only and  have a less options  
+example of important options : 
+$mkdir -p dir1/dir2
+$rmdir -p dir1/dir2 ->but shoulde be empty 
+
+- rm -> remove empty and non-empty directories and files have more options 
+example : 
+$rm -ir dir1
+$rm -rfv mycd/
+-r  -> use with directories if remove directory 
+-f -> force remove 
+-i -> alert message with remove and y or n 
+
+
+4- ~ in home 
+$mkdir -p dir1/dir11 dir1/dir12
+$cd dir1/dir11 ; touch file1
+$cd ~
+$mkdir docs ; cd docs/ ;touch mycv
+$cd ~
+
+a- $rmdir dir1/dir11
+what happen ? this erorr : rmdir: failed to remove 'dir1/dir11': Directory not empty
+and i will use rm -r to remove non-empty directories 
+
+b-$rmdir -p dir1/dir12 ? the same erorr , because if only dir12 in dir1 it is work but dir11 is have a file and is non-empty 
+
+c- 
+absolute path : 
+/home/user/mycv
+
+relative path : 
+mycv 
+
+5-$cp /etc/passwd mypasswd
+
+6-mv mypasswd oldpasswd
+
+7- 
+$cd ~
+$cd -
+$cd /home/hamin/
+$cd 
+$cd $HOME
+ 
+8-
+$cd /usr/bin
+$ls w*
+
+9-$head -n 4 /etc/passwd 
+
+10-$tail -n 7 /etc/passwd
+
+11- $man 1 passwd ; man 5 passwd
+
+12-$man 5 passwd
+
+13- $man -k passwd
+if not work can use 
+$sudo mandb 
+then 
+$man -k passwd
+

@@ -1,0 +1,77 @@
+1- $ sudo useradd islam -c "Islam Asker"
+$sudo passwd islam 
+
+2- $ sudo useradd baduser -c "Bad User"
+$sudo passwd baduser
+
+3- $ sudo groupadd -g 3000 pgroup
+
+4- $ sudo groupadd badgroup
+
+5- $ sudo usermod -aG pgroup islam  or $gpasswd -a islam pgroup
+to check : $getent group pgroup or $groups islam 
+
+6- $ sudo passwd islam 
+
+7- $ sudo chage -E $(date -d "+1months" +%F) islam 
+check : $sudo chage -l islam 
+ 
+8- $ sudo usermod -L baduser
+
+9- $ sudo userdel -r baduser 
+
+10- $ sudo groupdel badgroup 
+
+13- $ mkdir myteam/
+$chmod u=r myteam/
+
+14-done 
+
+15- $cd myteam/ -> is done
+
+16-
+- $ chmod u=rw,g=wx,o=x oldpasswd 
+- $chmod 631 oldpasswd
+
+- Change your default permissions to be as above: $ umask 002
+
+- What is the maximum permission a file can have, by default when it is just 
+created? And what is that for directory?
+file 666 and default umask 022 -> 666-022 -> 644 -> rw- r-- r--
+directory 777 -> 777-022 ->755 -> rwx r-x r-x
+
+- $umask 077 
+$mkdir test 
+$touch test/test1
+$ls -ld test 
+$ls -l test/test1
+
+17-What are the minimum permission needed for:
+-> Copy a directory (permission for source directory and permissions for target 
+parent directory)
+- have a write permission in target 
+
+-> Copy a file (permission for source file and and permission for target parent 
+directory)
+-have a write permission in target 
+
+-> Delete a file
+-have a write permission 
+
+-> Change to a directory
+- have a read and execute 
+-> List a directory content (ls command)
+- have a read 
+-> View a file content (more/cat command)
+- have a read 
+
+-> Modify a file content
+-have a write 
+
+18-$ touch file 
+$ chmod 444 file
+can’t edit and remove because all permission is read 
+
+19- x for a file -> can execute a script file (executable file)
+x for a directory with read -> r-x -> cd , ls -l 
+x for directory with write -> can modfiy mv , cp , delete 

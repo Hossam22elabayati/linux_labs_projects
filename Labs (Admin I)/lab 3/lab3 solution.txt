@@ -1,0 +1,65 @@
+1- $vi mycv
+
+2-
+a. Move the cursor down one line at time. ->  j
+b. Move the cursor up one line at time. -> k
+c. Search for word age -> :/age
+d. Step to line 5 (assuming that you are in line 1 and file is more than 5 lines). -> :5
+e. Delete the line you are on and line 5. -> :2 d |5 d    
+f. How to step to the end of line and change to writing mode in one-step -> G then o
+
+3- $ cat /etc/shells 
+
+4-$ env 
+or 
+$ print env
+
+5- $ decalre -x 
+or 
+$ export -p 
+
+6- $ echo $variable_name
+$ echo $PATH
+
+7- $ echo $SHELL
+
+8- 
+sh : 
+- /etc/profile
+- ~/.profile
+
+ksh :
+-  /etc/profile
+- ~/.profile
+- ~/.kshrc
+ 
+bash:
+- /etc/profile
+- ~/.bash_profile
+- ~/.bash_login
+- ~/.profile
+- ~/.bashrc
+- BASH_ENV (for no active shells)
+
+9- 
+$sudo nano /etc/bashrc 
+add lines in the end : 
+date 
+echo Welcom $USER
+
+# Set a custom prompt
+export PS1="\u@\h:\w\$ "
+
+prompt is : [username@hostname]~$
+
+10-
+$echo \
+>
+
+purpose : is used as an escape character in the shell. It tells the shell that the command is continued on the next line. It effectively escapes the newline character, allowing you to continue the command on the next line.
+To change the secondary prompt from > to another character, such as :, you can set the PS2 variable
+to change : from > to :
+$PS2 =":"
+:
+
+11- alias ls="ls -l"

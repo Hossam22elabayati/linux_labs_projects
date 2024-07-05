@@ -1,0 +1,57 @@
+1- $ ls /usr/bin/ >> /tmp/commmand.list
+
+2-[hamin@hossam ~]$ wc -w /tmp/commmand.list 
+1491 /tmp/commmand.list
+
+3- $ cut -d: -f1 /etc/passwd | grep -i ^g
+
+4- $ grep -i '^g' /etc/passwd | cut -d: -f1,5 | grep -v ':$'
+
+5- $ grep -i '^g' /etc/passwd | cut -d: -f1,5 | grep -v ':$' | sort -t: -k5 >> command_sort
+
+6- $ find / -name '.bash_profile' 2>/dev/null
+
+- $ ls -R / 1>>ouput_lab 2>>error_lab &
+
+7-  $ who | wc -l
+
+8- $ head -n 10 /etc/passwd | tail -n +7
+get the first ten and start from +7
+ 
+9-
+cat filename1 | cat filename2: cat filename2 will receive no input from cat filename1 and typically do nothing.
+ls | rm: Will likely produce an error message because rm receives non-standard input from ls.
+ls /etc/passwd | wc -l: Will count the single line output from ls /etc/passwd, which is 1.
+
+10-sleep 100 -> can’t use terminal when run in fground , can use after end 
+
+11- crtl +v or $ kill -19 4036 (pid)
+
+12- $ jobs 
+$ bg %1
+$ kill -19 4036 (pid)
+
+13-$jobs 
+sleep running in background 
+
+14- $fg %1 
+crtl+v
+$bg %1
+
+15- $kill 4036
+
+16- ps ax -u 1000
+
+
+17- $ ps aux | grep -v "$(whoami)"
+
+18- $ pgrep -u $(whoami)
+
+19-$ pkill -u  $(whoami)
+
+
+18- 
+
+19- 
+
+
