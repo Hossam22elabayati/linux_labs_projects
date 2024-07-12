@@ -64,6 +64,7 @@ $ls w*
 
 13- $man -k passwd
 if not work can use 
+
 $sudo mandb 
 then 
 $man -k passwd

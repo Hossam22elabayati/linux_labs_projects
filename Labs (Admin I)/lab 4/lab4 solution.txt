@@ -1,11 +1,11 @@
 1- $ ls /usr/bin/ >> /tmp/commmand.list
 
-2-[hamin@hossam ~]$ wc -w /tmp/commmand.list 
-1491 /tmp/commmand.list
+2-[hamin@hossam ~]$ wc -l /tmp/commmand.list 
+1508 /tmp/command_list
 
 3- $ cut -d: -f1 /etc/passwd | grep -i ^g
 
-4- $ grep -i '^g' /etc/passwd | cut -d: -f1,5 | grep -v ':$'
+4- $ cut -d: -f1,5 /etc/passwd | grep -i "^g"
 
 5- $ grep -i '^g' /etc/passwd | cut -d: -f1,5 | grep -v ':$' | sort -t: -k5 >> command_sort
 
@@ -50,8 +50,8 @@ $bg %1
 19-$ pkill -u  $(whoami)
 
 
-18- 
+18- $ pgrep -u hamin 
 
-19- 
+19- $  killall -u hamin 
 
 
